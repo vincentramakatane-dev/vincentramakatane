@@ -1,0 +1,493 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif; /* A common and readable font */
+    line-height: 1.6;
+    color: #333; /* Dark grey for text for good readability */
+    background-color: #ffffff; /* White background for the entire page */
+}
+
+.container {
+    width: 80%; /* Content width */
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Clear floats */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+/* Header & Navigation */
+header {
+    background: #f4f4f4; /* Light grey for the header background */
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid; /* A darker blue accent */
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header strong {
+    color: #0779e4; /* Highlight color for company name */
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; /* Use flexbox for horizontal navigation */
+    justify-content: center; /* Center the navigation items */
+}
+
+header li {
+    margin: 0 15px; /* Spacing between navigation items */
+}
+
+header#branding {
+    float: left;
+    margin-top: 10px;
+}
+
+header#branding h1 {
+    margin: 0;
+    color: #0779e4; /* Primary brand color for the shop name */
+}
+
+header nav {
+    float: right;
+    margin-top: 20px;
+}
+
+header nav ul li.current a { /* Style for the active page link */
+    color: #0779e4; /* Highlight the current page link */
+    font-weight: bold;
+}
+
+/* Navigation Hover Effect */
+header nav ul li a {
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    position: relative; /* Needed for the pseudo-element */
+    padding-bottom: 5px; /* Space for the underline */
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%; /* Start with no width */
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: #0779e4; /* The color of the underline */
+    transition: width 0.5s ease; /* Smooth width transition */
+    bottom: 0; /* Position at the bottom */
+}
+
+header nav ul li a:hover {
+    color: #0779e4; /* Text color on hover */
+}
+
+header nav ul li a:hover::after {
+    width: 100%; /* Expand to full width on hover */
+}
+
+
+/* Showcase Section (Hero Section) */
+#showcase {
+    min-height: 450px;
+    /* Use a background image for showcase, or a solid color */
+    background: #0779e4; /* Primary brand blue for the hero background */
+    color: #ffffff; /* White text on the dark blue background */
+    text-align: center;
+    padding-top: 100px; /* Push content down */
+    /* You can add a background image here: */
+    /* background-image: url('../images/hero-background.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+}
+
+#showcase h1 {
+    margin-top: 0;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.button_1 {
+    display: inline-block;
+    background: #0779e4; /* Primary brand blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button_1:hover {
+    background-color: #055ba1; /* Darker blue on hover */
+}
+
+.button_2 {
+    display: inline-block;
+    background: #ffffff; /* White for secondary button */
+    color: #0779e4; /* Primary blue text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid #0779e4; /* Blue border */
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button_2:hover {
+    background-color: #0779e4; /* Blue background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Services Section */
+#services {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#services h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #0779e4; /* Primary brand blue for section titles */
+}
+
+.service-item {
+    width: 30%; /* Adjust width as needed for responsiveness */
+    padding: 20px;
+    display: inline-block; /* Allows items to sit side-by-side */
+    margin: 1%; /* Spacing between items */
+    box-sizing: border-box; /* Include padding in width */
+    vertical-align: top; /* Align items at the top */
+    border: 1px solid #ccc; /* Light border for definition */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    background-color: #ffffff; /* White background for service boxes */
+}
+
+.service-item img {
+    width: 80px; /* Icon size */
+    height: 80px;
+    margin-bottom: 15px;
+    opacity: 0.8; /* Slightly translucent */
+}
+
+.service-item h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #0779e4; /* Primary brand blue for service titles */
+}
+
+/* About Snippet Section */
+#about-snippet {
+    background-color: #e7f3ff; /* Light blue background for this section */
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#about-snippet h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #0779e4; /* Primary brand blue */
+}
+
+/* Location Section */
+#location {
+    background-color: #ffffff; /* White background */
+    padding: 50px 0;
+    text-align: center;
+}
+
+#location h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #0779e4; /* Primary brand blue */
+}
+
+#location p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark grey footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 20px; /* Space above the footer */
+}
+
+/* Responsive Adjustments (Basic) */
+@media (max-width: 768px) {
+    header #branding,
+    header nav {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        justify-content: center;
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+
+    header nav li {
+        margin: 5px 0; /* Spacing for stacked items */
+    }
+
+    #showcase h1 {
+        font-size: 35px;
+    }
+
+    .service-item {
+        width: 90%; /* Make services stack on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .container {
+        width: 95%; /* Use more width on smaller screens */
+    }
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Increased gap for better separation */
+    margin-top: 30px;
+    justify-content: center;
+}
+
+/* Contact Info Section */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Deeper shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+}
+.contact-info:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.contact-info h3,
+.contact-form h3 { /* Shared styling for section headings */
+    color: #0779e4;
+    margin-bottom: 20px;
+    font-size: 26px; /* Slightly larger heading */
+    border-bottom: 2px solid #e7f3ff;
+    padding-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.contact-info strong {
+    color: #0779e4; /* Primary brand blue for emphasis */
+    font-weight: bold;
+}
+
+/* Social Links in Contact Info */
+.social-links {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+.social-links h4 {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 18px;
+}
+.social-links a {
+    display: inline-block;
+    margin-right: 20px; /* More space between icons */
+    color: #0779e4;
+    font-size: 30px; /* Larger icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-links a:hover {
+    color: #055ba1;
+    transform: scale(1.1); /* Slight scale-up on hover */
+}
+
+/* WhatsApp Button in Contact Info */
+.contact-method.whatsapp {
+    background-color: #e7f3ff; /* Light blue */
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 25px; /* Space above WhatsApp button */
+    display: inline-block; /* Needed for padding and shadow */
+}
+.contact-method.whatsapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+.contact-method.whatsapp i {
+    font-size: 35px; /* Larger WhatsApp icon */
+    color: #25D366; /* WhatsApp green */
+    margin-right: 15px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+}
+.contact-method.whatsapp span {
+    font-weight: bold;
+    font-size: 18px;
+    color: #0779e4; /* Boldview blue text */
+    vertical-align: middle; /* Align text with icon */
+}
+.contact-method.whatsapp a {
+    text-decoration: none; /* Remove underline from link */
+}
+
+
+/* Contact Form Section */
+.contact-form {
+    flex: 1.5; /* Form takes more space */
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Form Group Styling */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea,
+.contact-form input[type="file"] { /* Added file input styling */
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Styling for file input to look more integrated */
+.contact-form input[type="file"] {
+    padding: 10px 12px; /* Slightly less padding for file input */
+    background-color: #f9f9f9; /* Light background for file input */
+    border-radius: 5px;
+}
+
+/* Map Container */
+.map-container {
+    width: 100%;
+    margin-top: 50px; /* More space above map */
+    margin-bottom: 30px; /* Space below map */
+    text-align: center;
+    background-color: #f9f9f9; /* Light background for map area */
+    padding: 30px 0;
+    border-radius: 10px;
+}
+.map-container h3 {
+    color: #0779e4;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.map-container iframe {
+    border-radius: 8px; /* Rounded corners for map */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+/* Responsive Adjustments for Contact Page */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column; /* Stack contact info and form */
+        gap: 30px; /* Adjust gap */
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%; /* Take full width */
+        min-width: unset; /* Remove min-width */
+        box-sizing: border-box;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 24px; /* Smaller headings on mobile */
+    }
+
+    .contact-info p,
+    .contact-info strong {
+        font-size: 15px; /* Smaller text */
+    }
+
+    .contact-info .social-links a {
+        font-size: 26px; /* Smaller social icons */
+    }
+
+    .contact-method.whatsapp {
+        width: 100%; /* Full width for whatsapp button on mobile */
+        text-align: center;
+    }
+    .contact-method.whatsapp i,
+    .contact-method.whatsapp span {
+        display: inline-block; /* Make icon and text part of the link */
+        vertical-align: middle; /* Align properly */
+    }
+    .contact-method.whatsapp i {
+        margin-right: 10px;
+    }
+
+    .contact-form input[type="file"],
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form textarea {
+        width: 100%; /* Full width inputs on mobile */
+    }
+
+    .map-container {
+        margin-top: 40px;
+    }
+}
