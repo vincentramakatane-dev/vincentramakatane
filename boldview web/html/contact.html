@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Boldview</title>
+    <link rel="stylesheet" href="costyle.css">
+    <!-- Ensure Font Awesome is linked for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Boldview</span> Internet Cafe</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="internet-cafe.html">Internet Cafe</a></li>
+                    <li><a href="printing.html">Printing Services</a></li>
+                    <li class="current"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main-content">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for any inquiries, to request a quote, or to learn more about our services.</p>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Visit Our Shop</h3>
+                    <!-- Corrected placeholder details for Boldview -->
+                    <p><strong>Address:</strong> Railpark Mall, Opposite Jet, Gaborone, Botswana</p>
+                    <p><strong>Phone:</strong> [+267 71761665]</p> <!-- Placeholder phone -->
+                    <p><strong>Email:</strong> boldviewbw@gmail.com</p>
+
+                    <h3>Opening Hours</h3>
+                    <p><strong>Internet Cafe & Printing Services:</strong><br>
+                        Monday - Friday: 08:00 - 19:00<br>
+                        Saturday - Sunday: 08:30 - 15:00
+                    </p>
+
+                    <!-- Social Media Links - Corrected placeholder links and updated icons -->
+                    <div class="social-links">
+                        <h4>Follow Us:</h4>
+                        <a href="https://www.facebook.com/yourfacebookpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/yourtwitterhandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/yourinstagramprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                    <!-- WhatsApp Button for Contact Info -->
+                    <div class="contact-method whatsapp">
+                        <a href="https://wa.me/267XXXXXXXXXX?text=Hello%20Boldview%20Team,%20I%27d%20like%20to%20inquire%20about..." target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <!-- Form now includes file upload as per the about page request -->
+                    <form action="/upload-handler" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <!-- File Upload Field -->
+                        <div class="form-group">
+                            <label for="fileUpload">Upload File (Optional):</label>
+                            <input type="file" id="fileUpload" name="fileUpload">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="button_1">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h3>Find Us on the Map</h3>
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!4d24.668529!3d-24.635698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1bbfbb7425f8548b%3A0x192b5f6b23b17304!2sRail%20Park%20Mall!5e0!3m2!1sen!2sbw!4v1678886400000!5m2!1sen!2sbw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Google Map of Rail Park Mall"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Boldview &copy; 2026. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
